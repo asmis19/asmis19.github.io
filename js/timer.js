@@ -1,11 +1,3 @@
-var end = new Date(getNextBdayDate());
-var animEndTime = new Date(end.getTime() + 60 * 60 * 24 * 1000);
-var _second = 1000;
-var _minute = _second * 60;
-var _hour = _minute * 60;
-var _day = _hour * 24;
-var timer;
-
 function getNextBdayDate(){
     var date = '09/08/';
     var current = new Date();
@@ -16,6 +8,14 @@ function getNextBdayDate(){
     }
     return date + ' 12:00 AM';
 }
+
+var end = new Date(getNextBdayDate());
+var animEndTime = new Date(end.getTime() + 60 * 60 * 24 * 1000);
+var _second = 1000;
+var _minute = _second * 60;
+var _hour = _minute * 60;
+var _day = _hour * 24;
+var timer;
 
 function showRemaining() {
     var now = new Date();
