@@ -1,10 +1,20 @@
-var end = new Date('09/08/2017 12:00 AM');
-var animEndTime = new Date('09/09/2017 12:00 AM');
+var end = new Date(getNextBdayDate());
+var animEndTime = new Date(end.getTime() + 60 * 60 * 24 * 1000);
 var _second = 1000;
 var _minute = _second * 60;
 var _hour = _minute * 60;
 var _day = _hour * 24;
 var timer;
+
+function getNextBdayDate(){
+    var date = '09/08/';
+    var current = new Date();
+    if(current.getMonth() < 8 || (current.getMonth() == 8 && current.getDate() <= 8)){
+        date += current.getFullYear();
+    }else{
+        date += (current.getFullYear()+1);
+    return date + ' 12:00 AM';
+}
 
 function showRemaining() {
     var now = new Date();
