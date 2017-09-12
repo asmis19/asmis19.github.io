@@ -13,6 +13,7 @@ function getNextBdayDate(){
         date += current.getFullYear();
     }else{
         date += (current.getFullYear()+1);
+    }
     return date + ' 12:00 AM';
 }
 
