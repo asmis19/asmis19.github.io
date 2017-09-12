@@ -25,15 +25,15 @@ function showRemaining() {
         document.getElementById('countdown').innerHTML = 'NEXT YEAR MAYBE?';
         return;
     }
-    // var days = Math.floor(distance / _day);
+    var days = Math.floor(distance / _day);
     var hours = Math.floor((distance % _day) / _hour);
     var minutes = Math.floor((distance % _hour) / _minute);
     var seconds = Math.floor((distance % _minute) / _second);
 
-    // document.getElementById('countdown').innerHTML = days + 'days ';
-    document.getElementById('countdown').innerHTML = hours + ' hr' + (hours>1?'s':'') + ' ';
-    document.getElementById('countdown').innerHTML += minutes + ' min' + (minutes>1?'s':'') + ' ';
-    document.getElementById('countdown').innerHTML += seconds + ' sec' + (seconds>1?'s':'') + ' ';
+    document.getElementById('countdown').innerHTML = days + ' day' + (days>1?'s ':' ');
+    document.getElementById('countdown').innerHTML += hours + ' hr' + (hours>1?'s ':' ');
+    document.getElementById('countdown').innerHTML += minutes + ' min' + (minutes>1?'s ':' ');
+    document.getElementById('countdown').innerHTML += seconds + ' sec' + (seconds>1?'s':'');
 }
 
 timer = setInterval(showRemaining, 1000);
